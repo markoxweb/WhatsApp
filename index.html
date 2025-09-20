@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Generador de Enlaces WhatsApp</title>
 
-  <!-- Icono de WhatsApp -->
+  <!-- 
+    Generador de Enlaces WhatsApp
+    Este código permite construir enlaces directos a WhatsApp 
+    concatenando un número de teléfono y un mensaje personalizado.
+    Incluye opciones para abrir, copiar o compartir el enlace.
+    Facilitado por @Markoxsistemaspub
+  -->
+
   <link rel="icon" href="whatsapp-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="whatsapp-icon.png">
   <meta name="theme-color" content="#25D366">
@@ -31,6 +38,7 @@
     .out{word-break:break-all;background:#0a1324;padding:12px;border-radius:12px;margin-top:12px;border:1px dashed #28406e}
     .small{font-size:.85rem}
     .footer{margin-top:18px;color:var(--muted);font-size:.85rem;text-align:center}
+    .footer a { color: var(--accent); text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -41,53 +49,65 @@
         <div>
           <label for="cc">Código de país</label>
           <select id="cc" aria-label="Código de país">
-            <!-- América primero -->
-            <option value="57" selected>+57 (Colombia)</option>
-            <option value="52">+52 (México)</option>
-            <option value="1">+1 (EE. UU./Canadá)</option>
-            <option value="54">+54 (Argentina)</option>
-            <option value="55">+55 (Brasil)</option>
-            <option value="56">+56 (Chile)</option>
-            <option value="51">+51 (Perú)</option>
-            <option value="593">+593 (Ecuador)</option>
-            <option value="598">+598 (Uruguay)</option>
-            <option value="595">+595 (Paraguay)</option>
-            <option value="591">+591 (Bolivia)</option>
-            <option value="58">+58 (Venezuela)</option>
-            <option value="507">+507 (Panamá)</option>
-            <option value="506">+506 (Costa Rica)</option>
-            <option value="503">+503 (El Salvador)</option>
-            <option value="502">+502 (Guatemala)</option>
-            <option value="504">+504 (Honduras)</option>
-            <option value="505">+505 (Nicaragua)</option>
+             <!-- América primero -->
+             <option value="57" selected>+57 (Colombia)</option>
+             <option value="57" selected>+57 (Colombia)</option>
+             <option value="52">+52 (México)</option>
+             <option value="52">+52 (México)</option>
+             <option value="1">+1 (EE. UU./Canadá)</option>
+             <option value="1">+1 (EE. UU./Canadá)</option>
+ @@ -60,41 +67,23 @@ <h1>Generador de Enlaces WhatsApp</h1>
+             <option value="502">+502 (Guatemala)</option>
+             <option value="502">+502 (Guatemala)</option>
+             <option value="504">+504 (Honduras)</option>
+             <option value="504">+504 (Honduras)</option>
+             <option value="505">+505 (Nicaragua)</option>
+             <option value="505">+505 (Nicaragua)</option>
             <option value="592">+592 (Guyana)</option>
             <option value="597">+597 (Surinam)</option>
             <option value="592">+592 (Guyana)</option>
-            <option value="1-809">+1-809 (República Dominicana)</option>
-            <option value="1-787">+1-787 (Puerto Rico)</option>
+             <option value="1-809">+1-809 (República Dominicana)</option>
+             <option value="1-809">+1-809 (República Dominicana)</option>
+             <option value="1-787">+1-787 (Puerto Rico)</option>
+             <option value="1-787">+1-787 (Puerto Rico)</option>
 
-            <!-- Europa -->
-            <option value="34">+34 (España)</option>
-            <option value="39">+39 (Italia)</option>
-            <option value="33">+33 (Francia)</option>
-            <option value="49">+49 (Alemania)</option>
-            <option value="44">+44 (Reino Unido)</option>
-            <option value="351">+351 (Portugal)</option>
+             <!-- Europa -->
+             <!-- Europa -->
+             <option value="34">+34 (España)</option>
+             <option value="34">+34 (España)</option>
+             <option value="39">+39 (Italia)</option>
+             <option value="39">+39 (Italia)</option>
+             <option value="33">+33 (Francia)</option>
+             <option value="33">+33 (Francia)</option>
+             <option value="49">+49 (Alemania)</option>
+             <option value="49">+49 (Alemania)</option>
+             <option value="44">+44 (Reino Unido)</option>
+             <option value="44">+44 (Reino Unido)</option>
+             <option value="351">+351 (Portugal)</option>
+             <option value="351">+351 (Portugal)</option>
             <option value="31">+31 (Países Bajos)</option>
             <option value="41">+41 (Suiza)</option>
             <option value="43">+43 (Austria)</option>
 
-            <!-- África -->
-            <option value="27">+27 (Sudáfrica)</option>
-            <option value="20">+20 (Egipto)</option>
+             <!-- África -->
+             <!-- África -->
+             <option value="27">+27 (Sudáfrica)</option>
+             <option value="27">+27 (Sudáfrica)</option>
+             <option value="20">+20 (Egipto)</option>
+             <option value="20">+20 (Egipto)</option>
             <option value="234">+234 (Nigeria)</option>
             <option value="212">+212 (Marruecos)</option>
 
-            <!-- Asia -->
-            <option value="91">+91 (India)</option>
-            <option value="86">+86 (China)</option>
-            <option value="81">+81 (Japón)</option>
-            <option value="82">+82 (Corea del Sur)</option>
+             <!-- Asia -->
+             <!-- Asia -->
+             <option value="91">+91 (India)</option>
+             <option value="91">+91 (India)</option>
+             <option value="86">+86 (China)</option>
+             <option value="86">+86 (China)</option>
+             <option value="81">+81 (Japón)</option>
+             <option value="81">+81 (Japón)</option>
+             <option value="82">+82 (Corea del Sur)</option>
+             <option value="82">+82 (Corea del Sur)</option>
             <option value="62">+62 (Indonesia)</option>
             <option value="63">+63 (Filipinas)</option>
             <option value="60">+60 (Malasia)</option>
@@ -95,9 +115,11 @@
             <option value="90">+90 (Turquía)</option>
             <option value="66">+66 (Tailandia)</option>
 
-            <!-- Oceanía -->
-            <option value="61">+61 (Australia)</option>
-            <option value="64">+64 (Nueva Zelanda)</option>
+             <!-- Oceanía -->
+             <!-- Oceanía -->
+             <option value="61">+61 (Australia)</option>
+             <option value="61">+61 (Australia)</option>
+             <option value="64">+64 (Nueva Zelanda)</option>
           </select>
         </div>
         <div>
@@ -120,10 +142,15 @@
       <div id="linkOut" class="out small">—</div>
     </div>
 
-    <div class="footer">Tip: agrega esta página a tu pantalla de inicio para acceso rápido.</div>
+    <!-- Footer -->
+    <div class="footer">
+      Tip: agrega esta página a tu pantalla de inicio para acceso rápido.<br><br>
+      ⚡ Facilitado por <a href="https://linktr.ee/Markoxsistemaspub" target="_blank">@Markoxsistemaspub</a>
+    </div>
   </div>
 
   <script>
+    // Referencias a los elementos principales
     const cc = document.getElementById('cc');
     const phone = document.getElementById('phone');
     const msg = document.getElementById('msg');
@@ -132,8 +159,10 @@
     const copyBtn = document.getElementById('copyBtn');
     const shareBtn = document.getElementById('shareBtn');
 
+    // Elimina cualquier carácter que no sea número
     function soloNumeros(s){ return (s || '').replace(/\D+/g,''); }
 
+    // Construye el enlace wa.me con el número y mensaje
     function construirEnlace() {
       const code = soloNumeros(cc.value);
       const num = soloNumeros(phone.value);
@@ -143,18 +172,57 @@
       return `https://wa.me/${full}?text=${encodeURIComponent(text)}`;
     }
 
+    // Renderiza el enlace generado en pantalla
     function render() {
       const url = construirEnlace();
       linkOut.textContent = url || '—';
       return url;
     }
 
+    // Eventos para actualizar el enlace cuando el usuario escribe
     [cc, phone, msg].forEach(el => el.addEventListener('input', render));
 
+    // Botón: abrir enlace en WhatsApp
     openBtn.addEventListener('click', () => {
       const url = render();
       if(!url){ alert('Por favor ingresa código de país y número.'); return; }
       window.location.href = url;
+    });
+
+    // Botón: copiar enlace al portapapeles
+    copyBtn.addEventListener('click', async () => {
+      const url = render();
+      if(!url){ alert('No hay enlace para copiar.'); return; }
+      try {
+        await navigator.clipboard.writeText(url);
+        copyBtn.textContent = '¡Copiado!';
+        setTimeout(()=>copyBtn.textContent='Copiar enlace', 1200);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+        copyBtn.textContent = '¡Copiado!';
+        setTimeout(()=>copyBtn.textContent='Copiar enlace', 1200);
+      }
+    });
+
+    // Botón: compartir usando la API nativa del navegador
+    shareBtn.addEventListener('click', async () => {
+      const url = render();
+      if(!url){ alert('No hay enlace para compartir.'); return; }
+      if (navigator.share) {
+        try { await navigator.share({ title: 'Enlace WhatsApp', url }); }
+        catch(_) {}
+      } else {
+        alert('Tu navegador no soporta compartir nativo. Usa "Copiar enlace".');
+      }
+    });
+
+    // Inicializa render al cargar
+    render();
+  </script>
+</body>
+</html>
     });
 
     copyBtn.addEventListener('click', async () => {
